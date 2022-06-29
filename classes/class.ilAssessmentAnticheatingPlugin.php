@@ -13,7 +13,7 @@ class ilAssessmentAnticheatingPlugin extends ilUserInterfaceHookPlugin
     /** @var string */
     const PLUGIN_ID = "assac";
     /** @var string */
-    const PLUGIN_NAME = 'AssessmentAnticheatingPlugin';
+    const PLUGIN_NAME = 'AssessmentAnticheating';
     /** @var string */
     const CTYPE = 'Services';
     /** @var string */

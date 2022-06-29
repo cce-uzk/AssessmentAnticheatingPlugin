@@ -9,7 +9,7 @@ class ComposerStaticInit2f7d8cc9187a3ba8644eb1be455b3103
     public static $prefixLengthsPsr4 = array (
         'u' => 
         array (
-            'uzk\\gtour\\' => 10,
+            'uzk\\assac\\' => 10,
         ),
         'I' => 
         array (
@@ -18,7 +18,7 @@ class ComposerStaticInit2f7d8cc9187a3ba8644eb1be455b3103
     );
 
     public static $prefixDirsPsr4 = array (
-        'uzk\\gtour\\' => 
+        'uzk\\assac\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -30,13 +30,8 @@ class ComposerStaticInit2f7d8cc9187a3ba8644eb1be455b3103
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'ilGuidedTour' => __DIR__ . '/../..' . '/classes/model/ilGuidedTour.php',
-        'ilGuidedTourConfigGUI' => __DIR__ . '/../..' . '/classes/class.ilGuidedTourConfigGUI.php',
-        'ilGuidedTourPlugin' => __DIR__ . '/../..' . '/classes/class.ilGuidedTourPlugin.php',
-        'ilGuidedTourResourceStakeholder' => __DIR__ . '/../..' . '/classes/class.ilGuidedTourResourceStakeholder.php',
-        'ilGuidedTourUIHookGUI' => __DIR__ . '/../..' . '/classes/class.ilGuidedTourUIHookGUI.php',
-        'uzk\\gtour\\Config\\GuidedTourConfigToursTable' => __DIR__ . '/../..' . '/src/Config/GuidedTourConfigToursTable.php',
-        'uzk\\gtour\\MainBar\\GuidedTourMainBarProvider' => __DIR__ . '/../..' . '/src/MainBar/GuidedTourMainBarProvider.php',
+        'ilAssessmentAnticheatingPlugin' => __DIR__ . '/../..' . '/classes/class.ilAssessmentAnticheatingPlugin.php',
+        'ilAssessmentAnticheatingPluginUIHookGUI' => __DIR__ . '/../..' . '/classes/class.ilAssessmentAnticheatingPluginUIHookGUI.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

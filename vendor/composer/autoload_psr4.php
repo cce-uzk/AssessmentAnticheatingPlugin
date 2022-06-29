@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'uzk\\gtour\\' => array($baseDir . '/src'),
+    'uzk\\assac\\' => array($baseDir . '/src'),
     'ILIAS\\' => array($baseDir . '/../../../../src'),
 );

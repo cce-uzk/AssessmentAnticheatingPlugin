@@ -7,11 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'ilGuidedTour' => $baseDir . '/classes/model/ilGuidedTour.php',
-    'ilGuidedTourConfigGUI' => $baseDir . '/classes/class.ilGuidedTourConfigGUI.php',
-    'ilGuidedTourPlugin' => $baseDir . '/classes/class.ilGuidedTourPlugin.php',
-    'ilGuidedTourResourceStakeholder' => $baseDir . '/classes/class.ilGuidedTourResourceStakeholder.php',
-    'ilGuidedTourUIHookGUI' => $baseDir . '/classes/class.ilGuidedTourUIHookGUI.php',
-    'uzk\\gtour\\Config\\GuidedTourConfigToursTable' => $baseDir . '/src/Config/GuidedTourConfigToursTable.php',
-    'uzk\\gtour\\MainBar\\GuidedTourMainBarProvider' => $baseDir . '/src/MainBar/GuidedTourMainBarProvider.php',
+    'ilAssessmentAnticheatingPlugin' => $baseDir . '/classes/class.ilAssessmentAnticheatingPlugin.php',
+    'ilAssessmentAnticheatingPluginUIHookGUI' => $baseDir . '/classes/class.ilAssessmentAnticheatingPluginUIHookGUI.php',
 );

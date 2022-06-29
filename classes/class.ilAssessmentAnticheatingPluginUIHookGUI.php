@@ -45,15 +45,17 @@ class ilAssessmentAnticheatingPluginUIHookGUI extends ilUIHookPluginGUI
      */
     public function getHTML($a_comp, $a_part, $a_par = array()) : array
     {
-		/** @var ilCtrl $ilCtrl */
-		/** @var ilTabsGUI $ilTabs */
-		global $ilCtrl, $ilTabs;
+        global $DIC;
+        $userId = $this->user->getId();
+        $is_logged_in = ($userId && $userId != ANONYMOUS_USER_ID);
 
-        // If this method is triggered by loading a 'template' (whole page) and this is not an async call
-        if ($a_part == "sub_tabs" && $ilCtrl->getCmdClass() == 'iltestevaluationgui' && !$this->ctrl->isAsynch()) {
-            $ilCtrl->saveParameterByClass('ilAssessmentIPRangeFilterPageGUI', 'ref_id');
+        // If user is logged in (not anonymous)
+        if ($is_logged_in) {
+            // If this method is triggered by loading a 'template' (whole page) and this is not an async call
+            if ($a_part == "template_load" && !$this->ctrl->isAsynch()) {
+                $DIC->globalScreen()->layout()->meta()->addJs($this->plugin->getDirectory() . "/js/ilAssessmentAnticheating.js");
+            }
         }
-
         // Return without changes
         return array("mode" => ilUIHookPluginGUI::KEEP, "html" => "");
     }

@@ -1,0 +1,21 @@
+<!-- ANTICHEAT -->
+{ASSAC_VARIABLE}
+<div className="ilNoDisplay">
+    <svg id="test-active-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%" spreadMethod="pad"
+                            gradientTransform="rotate(45)">
+                <stop offset="0%" stop-color="#fbfbfb" stop-opacity="0.1"/>
+                <stop offset="100%" stop-color="#32475B" stop-opacity="1"/>
+            </linearGradient>
+            <pattern id="pattern" x="0" y="0" width="90" height="22" patternUnits="userSpaceOnUse"
+                     patternTransform="rotate(-35)">
+                <text id="test-active-svg-content" x="0" y="20" style="font-family:Verdana; font-size:20px; font-weight:bold; stroke:none; fill:#32475B; fill-opacity:0.15">
+                    active_id
+                </text>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" rx="10" ry="10" width="100%" height="100%" style=" fill: url( #gradient); fill-opacity:0.3;"/>
+        <rect x="0" y="0" rx="10" ry="10" width="100%" height="100%" style=" fill: url( #pattern); fill-opacity:0.3;"/>
+    </svg>
+</div>

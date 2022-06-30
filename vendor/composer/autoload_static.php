@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitfbe9fc53bd50ed4d1f58ec3f23b62d2b
+class ComposerStaticInit7453707c5c1592c4303c04172354763d
 {
     public static $prefixLengthsPsr4 = array (
         'u' => 
@@ -31,15 +31,15 @@ class ComposerStaticInitfbe9fc53bd50ed4d1f58ec3f23b62d2b
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'ilAssessmentAnticheatingPlugin' => __DIR__ . '/../..' . '/classes/class.ilAssessmentAnticheatingPlugin.php',
-        'ilAssessmentAnticheatingPluginUIHookGUI' => __DIR__ . '/../..' . '/classes/class.ilAssessmentAnticheatingPluginUIHookGUI.php',
+        'ilAssessmentAnticheatingUIHookGUI' => __DIR__ . '/../..' . '/classes/class.ilAssessmentAnticheatingUIHookGUI.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfbe9fc53bd50ed4d1f58ec3f23b62d2b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfbe9fc53bd50ed4d1f58ec3f23b62d2b::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitfbe9fc53bd50ed4d1f58ec3f23b62d2b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7453707c5c1592c4303c04172354763d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7453707c5c1592c4303c04172354763d::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit7453707c5c1592c4303c04172354763d::$classMap;
 
         }, null, ClassLoader::class);
     }

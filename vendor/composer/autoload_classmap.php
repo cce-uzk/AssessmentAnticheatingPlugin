@@ -8,5 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'ilAssessmentAnticheatingPlugin' => $baseDir . '/classes/class.ilAssessmentAnticheatingPlugin.php',
-    'ilAssessmentAnticheatingPluginUIHookGUI' => $baseDir . '/classes/class.ilAssessmentAnticheatingPluginUIHookGUI.php',
+    'ilAssessmentAnticheatingUIHookGUI' => $baseDir . '/classes/class.ilAssessmentAnticheatingUIHookGUI.php',
 );

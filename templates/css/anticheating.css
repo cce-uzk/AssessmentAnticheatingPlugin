@@ -1,0 +1,100 @@
+/* ANTICHEAT selection */
+body.kiosk {
+    padding: 0;
+    background-color: white;
+}
+#kioskOptions {
+    margin-bottom: 0;
+    padding: 20px;
+}
+#kioskTestTitle {
+    float: left;
+    width: auto;
+    padding: 10px;
+}
+#kioskParticipant {
+    float: right;
+    text-align: right;
+    width: auto;
+    padding: 10px;
+}
+#autosavemessage:empty {
+    display: none;
+}
+#tst_output {
+    background-color: white;
+    padding: 0 20px 50px;
+}
+#tst_output.tst-with-prevent-txt-selection .ilc_page_title_PageTitle,
+#tst_output.tst-with-prevent-txt-selection .ilc_qtitle_Title,
+#tst_output.tst-with-prevent-txt-selection .answertext,
+#tst_output.tst-with-prevent-txt-selection .ilc_qinput_TextInput,
+#tst_output.tst-with-prevent-txt-selection .ilc_qanswer_Answer,
+#tst_output.tst-with-prevent-txt-selection .ilAdditionalAssQuestionInstruction,
+#tst_output.tst-with-prevent-txt-selection .ilc_question_Standard > .ilc_qtitle_Title {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#tst_output.tst-with-watermark div.ilc_question_Standard {
+    background-color: transparent;
+    box-shadow: none;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+#tst_output .ilToolbar.navbar {
+    background-color: transparent;
+}
+#tst_output .btn {
+    font-size: 14px;
+}
+#tst_output textarea {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#tst_output .defaultSkin td.mceToolbar {
+    background: rgba(0, 0, 0, 0.2);
+}
+#tst_output .ilToolbar .ilToolbarStickyItems {
+    margin-left: 15px;
+}
+#tst_output .defaultSkin a:hover,
+#tst_output .defaultSkin a:link,
+#tst_output .defaultSkin a:visited,
+#tst_output .defaultSkin a:active {
+    background-color: white;
+}
+#tst_output div.ilc_qanswer_Answer {
+    padding-left: 0;
+}
+/* ANTICHEAT print protect */
+@media print {
+    * {
+        background-color: transparent !important;
+        z-index: 0;
+    }
+    #tst_output {
+        background-image: invalid !important;
+        /*mit Absicht falsche Anweisung um Delos @media Print zu unterbinden...*/
+    }
+    #tst_output:before {
+        z-index: 1;
+        color: black;
+        font-size: 30px;
+        position: fixed;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        opacity: 0.1;
+        content: attr(data-watermark);
+    }
+    body {
+        background-color: white !important;
+    }
+    .btn-group {
+        display: none;
+    }
+}

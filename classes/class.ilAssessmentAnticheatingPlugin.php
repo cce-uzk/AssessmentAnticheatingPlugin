@@ -11,7 +11,7 @@ class ilAssessmentAnticheatingPlugin extends ilUserInterfaceHookPlugin
     /** @var string */
     const PLUGIN_CLASS_NAME = self::class;
     /** @var string */
-    const PLUGIN_ID = "assac";
+    const PLUGIN_ID = 'assac';
     /** @var string */
     const PLUGIN_NAME = 'AssessmentAnticheating';
     /** @var string */
@@ -79,5 +79,4 @@ class ilAssessmentAnticheatingPlugin extends ilUserInterfaceHookPlugin
         //global $ilDB;
         //$ilDB->dropTable('assac_tablename');
     }
-
 }

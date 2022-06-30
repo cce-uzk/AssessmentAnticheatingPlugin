@@ -11,7 +11,7 @@ include_once("./Services/Init/classes/class.ilStartUpGUI.php");
  * @version $Id$
  * @ingroup ServicesUIComponent
  */
-class ilAssessmentAnticheatingPluginUIHookGUI extends ilUIHookPluginGUI
+class ilAssessmentAnticheatingUIHookGUI extends ilUIHookPluginGUI
 {
     protected $ctrl;
     protected $tpl;
@@ -53,7 +53,25 @@ class ilAssessmentAnticheatingPluginUIHookGUI extends ilUIHookPluginGUI
         if ($is_logged_in) {
             // If this method is triggered by loading a 'template' (whole page) and this is not an async call
             if ($a_part == "template_load" && !$this->ctrl->isAsynch()) {
-                $DIC->globalScreen()->layout()->meta()->addJs($this->plugin->getDirectory() . "/js/ilAssessmentAnticheating.js");
+
+                $DIC->globalScreen()->layout()->meta()->addJs($this->plugin->getDirectory() . "/js/anticheating.js");
+                $DIC->globalScreen()->layout()->meta()->addCss($this->plugin->getDirectory() . "/templates/css/anticheating.css");
+
+                // Add AntiCheating HTML to output
+                $html = $a_par['html'];
+                $index = strripos($html, "</body>", -7);
+                if ($index !== false) {
+                    try {
+                        // Set all AntiCheating HTML Template Variables
+                        $tmpl = $this->plugin->getTemplate("tpl.anticheating.html", true, true);
+                        $tmpl->setVariable('ASSAC_VARIABLE', '');
+                        $html = substr($html, 0, $index) . $tmpl->get() . substr($html, $index);
+                        return array("mode" => ilUIHookPluginGUI::REPLACE, "html" => $html);
+                    } catch (Exception $ex) {
+
+                    }
+                }
+
             }
         }
         // Return without changes

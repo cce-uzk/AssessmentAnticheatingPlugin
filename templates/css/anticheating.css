@@ -46,6 +46,10 @@ body.kiosk {
     padding-left: 0;
     padding-bottom: 0;
 }
+#tst_output.tst-with-watermark tr.std {
+    background-color: transparent;
+}
+
 #tst_output .ilToolbar.navbar {
     background-color: transparent;
 }

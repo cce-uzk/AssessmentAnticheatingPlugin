@@ -2,6 +2,9 @@
 ### University of Cologne | Competence Center E-Learning
 #### Nadimo Staszak
 
+## Attention: Previous changes to the branch are necessary. If you have any questions, please contact the plugin developer.
+Current development status: solution is currently (due to necessary branch changes) only suitable for the UoC.
+
 ## Installation
 ### Download via ZIP
 Start at your ILIAS root directory. It is assumed the generated downloaded plugin `assac.zip` is in your download folder `~/Downloads`. 
